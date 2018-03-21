@@ -41,7 +41,7 @@ public class Array_List {
         System.out.println("b arraylistinin elemanları: "+b);
         b.clear();
         System.out.println(b);
-        
+        System.out.println("");
     }
     
 }
