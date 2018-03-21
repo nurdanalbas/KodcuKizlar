@@ -11,10 +11,7 @@ import java.util.ArrayList;
  * @author NurdanPC
  */
 public class Array_List {
-   
-    
-    
-    
+
     public static void main(String[] args) {
     
         ArrayList a=new ArrayList();    
@@ -36,12 +33,14 @@ public class Array_List {
         
         
         ArrayList<String> b=new ArrayList<String>();
+        
         b.add("kanuni");
         b.add("sultan");
         b.add("osmanlı imparatorluğu");
         b.remove(1);
         System.out.println("b arraylistinin elemanları: "+b);
-        
+        b.clear();
+        System.out.println(b);
         
     }
     
