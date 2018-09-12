@@ -1,0 +1,4 @@
+--docker kurulumu
+--nginx kurulumu
+--nginx konfig
+--developer guide oku,anla
