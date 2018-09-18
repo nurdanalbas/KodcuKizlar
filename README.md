@@ -1,28 +1,31 @@
 ---
-description: v1.0.0
+description: 1.1.0
 ---
 
 # Proje Yönetimi Dökümantasyonu
 
-**Personel İzin Takip Programı**
+1.1.0
 
-**Proje Tanımı** 
+Projede minör değişiklik yapılmıştır.
 
-Sağlık kurumunda çalışan personellerin izin takibinin yapılabileceği bir program geliştirilmesi.
-
- **Proje Amacı ve Kapsamı** 
-
-Personel izinlerin belli bir sistem üzerinden verilmesi/alınması,personel izinlerinin türü,her personelin bilgilerinin sistemde tutulması,geçmiş izin günlerinin takibi,izin alan personellerin kayıtlarının tutulması,müdür ve personel ilişkilerinin kaydının tutulması. 
-
-**Proje Gerekçesi** 
-
-Kurumda çalışan personellerin izin takibinin program olmadan yapılması, kimi personellerin fazla izin kullanmasına kiminin ise izin kullanmadığı halde daha az izine sahip olmasına neden olmuştur.İzinlerin tutarlılığının sağlanabilmesi için izin takip programına gerek duyulmuştur. 
-
-**Proje Temeli** 
-
-Proje yönetici tarafından gelmiştir.Dikkatlice değerlendirilip başka alternatif bulunamamış ve kabul edilmiştir. 
-
-**Proje Politikası**
-
- Projenin temel fonksiyonu olan personel bilgilerinin eklenmesi ve izin istek kısmının bir hafta içerisinde bitmesi beklenmektedir.Diğer fonksiyonların da iki hafta içerisinde tamamlanması gerekmektedir.
+```text
+ public DoktorİlacGir() {
+        initComponents();
+        jTextField1.setText(String.valueOf(DoktorGirisEkrani.rID));
+        ilacID();
+    }
+    
+    void ilacID() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("YazilimMuhPU");
+        EntityManager em = emf.createEntityManager();
+        Query q = em.createQuery("SELECT MAX(p.ilacid) FROM Ilac p");
+        
+        int d = (int) q.getResultList().get(0);
+        jTextField5.setText(String.valueOf(d + 1));
+        
+        em.close();
+        emf.close();
+        
+    }
+```
 
